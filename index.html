@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>AIZK DApp Marketplace</title>
+  <script src="https://cdn.jsdelivr.net/npm/ethers@6.6.0/dist/ethers.umd.min.js"></script>
+  <script src="./app.js"></script>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🛍️ AIZK Marketplace DApp</h1>
+    <button id="connectWallet">连接钱包</button>
+    <p id="walletAddress">未连接</p>
+
+    <hr>
+
+    <div id="dashboard">
+      <h2>📊 用户仪表盘</h2>
+      <p>钱包地址: <span id="userAddress"></span></p>
+      <p>AIZK 余额: <span id="aizkBalance">0</span></p>
+      <p>USDT 余额: <span id="usdtBalance">0</span></p>
+      <p>累计算力: <span id="miningPower">0</span></p>
+      <p>挖矿收益: <span id="reward">0</span></p>
+    </div>
+
+    <hr>
+
+    <div id="market">
+      <h2>🛒 商品商城</h2>
+      <div class="product">
+        <h3>商品 #1：能量矿卡</h3>
+        <p>价格：100 USDT</p>
+        <button onclick="buyProduct(1,1)">购买</button>
+      </div>
+      <div class="product">
+        <h3>商品 #2：VIP 算力提升卡</h3>
+        <p>价格：500 USDT</p>
+        <button onclick="buyProduct(2,1)">购买</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
